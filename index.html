@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WS Suplementos</title>
+</head>
+<body>
+    <header>
+        <div id="marca"> <!-- Logo do site -->
+            <h1>WS Suplementos</h1>
+            <img id="logo" src="./assets/logo.png" alt="haltere">
+        </div>
+            <nav> <!-- Botões que linkam os arquivos HTML -->
+                <ul>
+                    <li id="fale-conosco"><a href="#">Fale Conosco</a></li>
+                    <li class="mobile"><a href="./index.html">Produtos</a></li>
+                    <li class="mobile"><a href="./motivacional.html">Motivacional</a></li>
+                </ul>
+            </nav>
+    </header>
+        <main class="main-produtos"> <!-- Menu inicial da pagina produtos -->
+            <section class="produto"> <!-- Produto 1 -->
+                <img id="PreTreino" src="./assets/pre-treino.jpg" alt="Pre treino">
+                <h2>Pré Treino Psichotic</h2>
+                <span class="preco">R$ 90,00</span>
+                <button id="botaoPre">Visualizar produto</button>
+            </section>
+
+            <section class="produto"> <!-- Produto 2 -->
+                <img id="CreatinaI" src="./assets/creatina_integral_medica.jpg" alt="Creatina Integral Medica">
+                <h2>Creatina Integral Medica</h2>
+                <span class="preco">R$ 150,00</span>
+                <button id="botaoCre">Visualizar produto</button>
+            </section>
+
+            <section class="produto"> <!-- Produto 3 -->
+                <img id="glutamina" src="./assets/glutamina.png" alt="Glutamina Integral Medica">
+                <h2>Glutamina integral medica</h2>
+                <span class="preco">R$ 40,00</span>
+                <button>Indisponível</button>
+            </section>
+
+            <section class="produto"> <!-- Produto 4 -->
+                <img id="CreatinaM" src="./assets/creatina_max.jpg" alt="Creatina Max Titanium">
+                <h2>Creatina Max Titanium</h2>
+                <span class="preco">R$ 150,00</span>
+                <button>Indisponível</button>
+            </section>
+
+            <section class="produto"> <!-- Produto 5 -->
+                <img id="creatinaP" src="./assets/creatina_probiotica.jpg" alt="Creatina Probiotica">
+                <h2>Creatina Probiotica</h2>
+                <span class="preco">R$ 139,00</span>
+                <button>Indisponível</button>
+            </section>
+        </main>
+    <footer><!-- Rodapé -->
+        <p>&copy; 2023 WS Suplementos. Todos os direitos reservados.</p>
+    </footer>
+    <script> /* JavaScript */
+            document.addEventListener("DOMContentLoaded", function() {
+
+            // Botão para redirecionar para a página do pré-treino
+            document.getElementById("botaoPre").addEventListener("click", function() { 
+                window.location.href = "pre-treino.html";
+            });
+
+            // Botão para redirecionar para a página da creatina
+            document.getElementById("botaoCre").addEventListener("click", function() {
+                window.location.href = "creatina.html";
+            });
+
+            // Alert do botão de "Fale Conosco"
+            document.getElementById("fale-conosco").onclick = alerta;
+
+            function alerta() {
+                alert("Página em manutenção, desculpe o transtorno!");
+            }
+        });
+    </script>
+</body>
+</html>

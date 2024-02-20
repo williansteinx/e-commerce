@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="marca"> <!-- Logo do site -->
+                <h1 id="retornar">WS Suplementos</h1>
+                <img id="logo" src="./assets/logo.png" alt="haltere">
+        </div>
+            <nav>   <!-- Botões que linkam os arquivos HTML -->
+                <ul>
+                    <li id="fale-conosco"><a href="#">Fale Conosco</a></li>
+                    <li class="mobile"><a href="./index.html">Produtos</a></li>
+                    <li class="mobile"><a href="./motivacional.html">Motivacional</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main class="main-motivacional"> <!-- Elementos do corpo da pagina -->
+        <h1 style="color: black; font-size: 60px">A Constância é a chave do sucesso!</h1>
+        <video style="max-width: 1000px;" controls autoplay src="./assets/SnapInsta.io-⚜️ EU SOU O MELHOR, SOU CAMPEÃO _ Motivacional Bodybuilding(720p).mp4"></video>
+
+        <h2 style="font-size: 45px; margin-top: 20px; max-width: 900px;">Nos ajude a implementar melhorias enviando seu feedback no formulário abaixo:</h2><br>
+
+        <form action="/submit" method="post">
+            
+            <!-- Campo de Texto -->
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+            <br>
+    
+            <!-- Campo de Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            
+            <!-- Campo de Senha -->
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" pattern="\(?[0-9]{2}\)?\s?[0-9]{4,5}-?[0-9]{4}" placeholder="(12) 3456-7890" required>
+
+    
+            <!-- Campo de Seleção -->
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select>
+            <br>
+    
+            <!-- Campo de Data -->
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" id="dataNascimento" name="dataNascimento" required>
+            <br>
+    
+            <!-- Campo de Texto Multilinha -->
+            <label for="mensagem">Feedback sobre o site</label>
+            <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea>
+            <br>
+    
+            <!-- Botão de Envio -->
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer> <!-- Rodape -->
+        <p>&copy; 2023 WS Suplementos. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.getElementById("fale-conosco").onclick = alerta;
+
+        function alerta() {
+            alert("Página em manutenção, desculpe o transtorno!");
+        }
+
+        // Função para lidar com o evento onfocus
+        function onFocusHandler() {
+            console.log("Campo em foco");
+        }
+
+        // Função para lidar com o evento onblur
+        function onBlurHandler(event) {
+            const input = event.target;
+            if (input.value.trim() !== '') {
+                input.style.border = '2px solid green';
+            } else {
+                input.style.border = ''; // Reverte para a borda padrão se o campo estiver vazio
+            }
+        }
+
+        // Adiciona os eventos onfocus e onblur para os campos de formulário - Evento 3 e 4
+        document.getElementById("nome").onfocus = onFocusHandler;
+        document.getElementById("nome").onblur = onBlurHandler;
+
+        document.getElementById("email").onfocus;
+        document.getElementById("email").onblur = onBlurHandler;
+
+        document.getElementById("telefone").onfocus = onFocusHandler;
+        document.getElementById("telefone").onblur = onBlurHandler;
+
+        document.getElementById("genero").onfocus = onFocusHandler;
+        document.getElementById("genero").onblur = onBlurHandler;
+
+        document.getElementById("dataNascimento").onfocus = onFocusHandler;
+        document.getElementById("dataNascimento").onblur = onBlurHandler;
+
+        document.getElementById("mensagem").onfocus = onFocusHandler;
+        document.getElementById("mensagem").onblur = onBlurHandler;
+
+        //Função para mostrar o alert que o formulário foi enviado
+        function onSubmitHandler(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            alert("Feedback enviado!");
+        }
+
+        // Adiciona o evento submit para envio do formulário - Evento 5
+        document.querySelector("form").onsubmit = onSubmitHandler;
+    </script>
+</body>
+</html>

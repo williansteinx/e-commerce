@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creatina Integral Medica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> <!-- Cabeçalho -->
+        <div id="marca"><!-- Logo do site -->
+                <h1 id="retornar">WS Suplementos</h1>
+                <img id="logo" src="./assets/logo.png" alt="haltere">
+        </div>
+            <nav> <!-- Links de navegaçao -->
+                <ul>
+                    <li id="fale-conosco"><a href="#">Fale Conosco</a></li>
+                    <li class="mobile"><a href="./index.html">Produtos</a></li>
+                    <li class="mobile"><a href="./motivacional.html">Motivacional</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main class="main-venda">
+        <section id="container"> <!-- Titulo, botoes e descrição do produto -->
+            <img id="Creatina" src="./assets/creatina_integral_medica500.jpg" alt="Creatina Integral Medica">
+            <aside> 
+                <h2>Creatina Integral Medica</h2>
+                <span id="valorProduto"></span>
+                <div class="botoes">
+                    <button id="adicionarCarrinho">Adicionar ao Carrinho</button>
+                    <div class="contador">
+                        <button id="decrementar">-</button>
+                        <span id="quantidade">0</span>
+                        <button id="incrementar">+</button>
+                    </div>
+                </div>
+                <br>
+                <p>Ganhe volume e massa muscular, aumente sua força e melhore o desempenho e resistência nos seus treinos suplementando com a Creatina Hardcore Integral médica. Produto 100% puro, de excelente qualidade</p>
+            </aside>
+        </section>
+    </main>
+        <div>
+            <h2 style="font-size: 50px; display: flex; justify-content: center;">Tabela nutricional do produto:</h2><br>
+            <table class="tabela" border> <!-- Tabela nutricional do produto -->
+                <thead>
+                    <tr>
+                        <th>Porção de 3g (1 scoop)</th>
+                        <th>Qtde. por porção</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Valor Energético</td>
+                        <td>5kcal</td>
+                    </tr>
+                    <tr>
+                        <td>Proteínas</td>
+                        <td>0mg</td>
+                    </tr>
+                    <tr>
+                        <td>Creatina</td>
+                        <td>3000mg</td>
+                    </tr>
+                    <tr>
+                        <td>Gorduras Totais</td>
+                        <td>0mg</td>
+                    </tr>
+                    <tr>
+                        <td>Gorduras Saturadas</td>
+                        <td>0mg</td>
+                    </tr>
+                    <tr>
+                        <td>Gorduras Trans</td>
+                        <td>0mg</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    <footer> <!-- Rodapé -->
+        <p>&copy; 2023 WS Suplementos. Todos os direitos reservados.</p>
+    </footer>
+        <script>
+            // Inicia 
+            document.addEventListener("DOMContentLoaded", function() {
+            
+            // Evento onclick para ativar a funçao que mostra o alert - Evento 1
+            document.getElementById("fale-conosco").onclick = alerta;
+
+            function alerta() {
+            alert("Página em manutenção, desculpe o transtorno!");
+            }
+
+            // Variaveis para a funcao de incremento e decremento
+            var decrementarBtn = document.getElementById("decrementar");
+            var incrementarBtn = document.getElementById("incrementar");
+            var quantidadeSpan = document.getElementById("quantidade");
+
+            // Valor inicial do contador
+            var quantidade = 0;
+
+            // Decrementa uma unidade na compra
+            decrementarBtn.addEventListener("click", function() {
+            if (quantidade > 0) {
+                quantidade--;
+                atualizarQuantidade();
+            }
+            });
+
+            // Incrementa uma unidade na compra
+            incrementarBtn.addEventListener("click", function() {
+            quantidade++;
+            atualizarQuantidade();
+            });
+
+            // Função para atualizar o valor exibido no contador
+            function atualizarQuantidade() {
+            quantidadeSpan.textContent = quantidade;
+            }
+
+            // Funcao para mostrar o valor do produto
+            function mostrarValorProduto() {
+        
+                var valorProduto = 150.00;
+
+            
+                document.getElementById("valorProduto").textContent = "R$ " + valorProduto.toFixed(2);
+            }
+
+            // Evento Onload para mostrar o valor do produto - Evento 2
+            window.onload = mostrarValorProduto;
+
+            // Função para lidar com o evento mouseenter - Evento 6
+            function onMouseEnterHandler() {
+                document.querySelector(".main-venda h2").style.color = 'red';
+            }
+
+            // Adiciona o evento mouseenter ao elemento <main>
+            document.querySelector(".main-venda h2").addEventListener("mouseenter", onMouseEnterHandler);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Nunito:wght@1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@1000&display=swap');
+
+/* Configuração inicial para todos os elementos do site */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Bebas Neue;
+}
+
+/* Configuração geral para elementos da tag body */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+/*Cabeçalho*/
+header { 
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+/*Espaçamento do h1 da borda*/
+header div { 
+    padding-left: 7%;
+}
+
+/* Define a disposição dos elementos da div da logo */
+#marca { 
+    display: flex;
+}
+
+/* Ajusta o tamanho do icone ao lado do titulo */
+#logo { 
+    max-width: 50px;
+}
+
+/* Estiização do nome do e-commerce */
+h1 { 
+    font-size: 45px;
+    color: white;
+    letter-spacing: 4px;
+    padding-right: 12px;
+}
+
+/* Define o comportamento margem e posição dos links do cabeçalho */
+li {    
+    display: inline-block;
+    margin-inline: 20px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Aplica o efeito de aumento nos links do cabeçalho */
+li:hover {
+    transform: scale(1.1);
+}
+
+/* Estilização dos links */
+a { 
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+}
+
+/* Alinha o produto e botões das paginas de cada produto */
+.main-venda { 
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Define tamanho, sombra e efeitos de transiçao nos produtos da pagina index */
+.produto { 
+    max-width: 100%;
+    height: 100%;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 15px;
+    text-align: center;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+    height: 360px;
+}
+
+/* Efeito para aumentar o produto quando passar o mouse */
+.produto:hover { 
+    transform: scale(1.1);
+}
+
+/* Define o tamanho da imagem de cada produto */
+.produto img {  
+    max-width: 80%;
+    height: auto;
+    padding-top: 20px;
+}
+
+/* Titulo de cada produto da pagina produtos */
+.produto h2 { 
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+/* Define o tamanho e comportamento do preço dos produtos na pagina index */
+.produto .preco {
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Alinha os elementos da pagina motivacional */
+.main-motivacional {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 50px;
+}
+
+/* Adiciona estilos para o vídeo */
+.main-motivacional video {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Define tamanho, cor e distancia entre o titulo e o outro elemento */
+.main-motivacional h1 {
+    font-size: 36px; 
+    color: #333; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+/* Alinha os produtos do html produtos */
+.main-produtos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Define tamanho, sombra e cor e outros atributos dos botões */
+button {
+    font-size: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: black;
+    border: 1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Adiciona efeito ao passar o mouse nos botões */
+button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+/* Estilização do rodapé */
+footer {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Estilização do parágrafo do rodapé */
+footer > p {
+    align-items: center;
+    color: white;
+    font-size: 35px;
+}
+
+/* Define o comportamento dos elementos dentro da tag section nas paginas dos produtos */
+#container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: auto;
+}
+
+/* Define a largura maxima  */
+#Pre-treino {
+    max-width: 100%;
+}
+
+/* Define a largura maxima, margem e espaçamento interno dos elementos da tag aside */
+aside {
+    margin-left: 100px;
+    flex-grow: 1; 
+    max-width: 100%;
+}
+
+/* Define o tamanho da fonte do texto dentro da tag h2 de aside */
+aside > h2 {
+    font-size: 50px;
+}
+
+/* Define o tamanho da fonte do texto dentro da tag span de aside */
+aside>span {
+    font-size: 50px;
+}
+
+/* Define a posição dos botões e os alinha no centro, com espaçamento interno superior */
+.botoes {
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+}
+
+/* Alinha o contador no centro */
+.contador {
+    display: flex;
+    align-items: center;
+}
+
+/* Estiliza e enquadra o texto de descrição dos produtos */
+aside p {
+    margin-top: 10px;
+    font-family: Lato;
+    font-size: 25px;
+    max-width: 600px;
+    text-align: justify;
+}
+
+/* Estilização e alinhamento dos botões de incremento na pagina de cada produto */
+#decrementar, #incrementar {
+    font-size: 16px;
+    padding: 5px 10px px;
+    background-color: #ffffff;
+    color: black;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+/* Efeito de transição lento nos botões de incremento e decremento */
+#decrementar:hover, #incrementar:hover {
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Estiliza a quantidade do contador nas paginas dos produtos */
+#quantidade {
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+/* Centraliza e define o tamanho da tabela */
+.tabela {   
+    max-width: 500px;
+    width: 100%; 
+    margin: 0 auto;
+    margin-bottom: 100px;
+    font-size: 30px;
+}  
+
+/* Largura e tamanho da fonte do formulario */
+form {
+    width: 600px;
+    font-size: 20px;
+}
+
+/* Estilizaçao do titulo dos campos do formulario */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: Lato;
+}
+
+/* Estilizaçao dos campos do formulario */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+    

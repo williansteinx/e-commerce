@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-treino Psichotic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> <!-- Cabeçalho -->
+        <div id="marca"> <!-- Logo do site -->
+                <h1 id="retornar">WS Suplementos</h1>
+                <img id="logo" src="./assets/logo.png" alt="haltere">
+        </div>
+            <nav> <!-- Botões que linkam os arquivos HTML -->
+                <ul>
+                    <li id="fale-conosco"><a href="#">Fale Conosco</a></li>
+                    <li class="mobile"><a href="./index.html">Produtos</a></li>
+                    <li class="mobile"><a href="./motivacional.html">Motivacional</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main class="main-venda"><!-- Titulo, imagem, botoes e descrição do produto -->
+        <section id="container"> 
+            <img id="Creatina" src="./assets/pre-treino500.jpg" alt="Creatina Integral Medica">
+            <aside>
+                <h2>Pré Treino Psichotic</h2>
+                <span id="valorProduto"></span>
+                <div class="botoes">
+                    <button id="adicionarCarrinho">Adicionar ao Carrinho</button>
+                    <div class="contador">
+                        <button id="decrementar">-</button>
+                        <span id="quantidade">0</span>
+                        <button id="incrementar">+</button>
+                    </div>
+                </div>
+                <br>
+                <p>Psichotic é um Pré-treino completo, super concentrado, com ingredientes clinicamente testados, que oferecem energia de forma explosiva, auxiliam na melhora do desempenho nos treinos intensos, promovendo o aumento de força, resistência e recuperação muscular.</p>
+            </aside>
+        </section>
+    </main>
+    <!-- Div com titulo e tabela -->
+    <div>
+        <h2 style="font-size: 50px; display: flex; justify-content: center;">Tabela nutricional do produto:</h2><br>
+        <table class="tabela" border> <!-- Tabela nutricional do produto -->
+            <thead>
+                <tr>
+                    <th>Porção de 5g (1 scoop)</th>
+                    <th>Qtde. por porção</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Valor Energético</td>
+                    <td>16kcal</td>
+                </tr>
+                <tr>
+                    <td>Taurina</td>
+                    <td>1000mg</td>
+                </tr>
+                <tr>
+                    <td>Cafeína</td>
+                    <td>400mg</td>
+                </tr>
+                <tr>
+                    <td>L-Arginina</td>
+                    <td>1000mg</td>
+                </tr>
+                <tr>
+                    <td>Alanina</td>
+                    <td>1000mg</td>
+                </tr>
+                <tr>
+                    <td>Magnésio</td>
+                    <td>260mcg</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer><!-- Rodapé -->
+        <p>&copy; 2023 WS Suplementos. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        // Inicia 
+        document.addEventListener("DOMContentLoaded", function() {
+        
+        // Evento para mostrar o alert - Evento 1
+        document.getElementById("fale-conosco").onclick = alerta;
+
+        function alerta() {
+        alert("Página em manutenção, desculpe o transtorno!");
+        }
+
+        // Variaveis para a funcao de incremento e decremento
+        var decrementarBtn = document.getElementById("decrementar");
+        var incrementarBtn = document.getElementById("incrementar");
+        var quantidadeSpan = document.getElementById("quantidade");
+
+        // Valor inicial do contador
+        var quantidade = 0;
+
+        // Decrementa uma unidade na compra
+        decrementarBtn.addEventListener("click", function() {
+        if (quantidade > 0) {
+            quantidade--;
+            atualizarQuantidade();
+        }
+        });
+
+        // Incrementa uma unidade na compra
+        incrementarBtn.addEventListener("click", function() {
+        quantidade++;
+        atualizarQuantidade();
+        });
+
+        // Função para atualizar o valor exibido no contador
+        function atualizarQuantidade() {
+        quantidadeSpan.textContent = quantidade;
+        }
+
+        // Funcao para mostrar o valor do produto
+        function mostrarValorProduto() {
+    
+            var valorProduto = 90.00;
+
+        
+            document.getElementById("valorProduto").textContent = "R$ " + valorProduto.toFixed(2);
+        }
+
+        // Evento Onload para mostrar o valor do produto - Evento 2
+        window.onload = mostrarValorProduto;
+
+        // Função para lidar com o evento mouseenter - Evento 6
+        function onMouseEnterHandler() {
+            document.querySelector(".main-venda h2").style.color = 'purple';
+        }
+
+        // Adiciona o evento mouseenter ao elemento <main>
+        document.querySelector(".main-venda h2").addEventListener("mouseenter", onMouseEnterHandler);
+    });
+    </script>
+</body>
+</html>
